@@ -83,7 +83,7 @@ img {
 .container {
     background-color:#999999;
     margin: 0 auto;
-    max-width:90%;
+    max-width:70%;
     padding:3.125em;
     }
 /*[class*="item"]{
@@ -99,7 +99,7 @@ img {
   }
   .images {
      margin-left: 45.454545454545%; /* Push img out of figcaptions's way */
-     width: 54.545454545454%; /* Make the image 6/11's of the page */
+     width: 50%; 
   }
   figcaption {
     position: absolute; /* Position figcaption absolutely, -relative- to figure, above */
@@ -108,19 +108,24 @@ img {
     left: 0; /* ...and very left of figure */
   }
 
- .flexbox figure {
-    position: static;
+ .flexbox-container {
+   /* position: static; */
     display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background-color:#999999;
+    max-width:70%;
   }
-  .flexbox .images {
+  
+  .flexbox-item1 {
     margin-left: 0;
     width: auto;
-    flex-basis: 54.545454545454%;
+    flex-basis: 40%;
   }
-  .flexbox figcaption {
+  .flexbox-item2 {
     position: static;
     width: auto;
-    flex-basis: 45.454545454545%;
+    flex-basis: 50%;
   }
 
 }
