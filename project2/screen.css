@@ -89,19 +89,29 @@ ul {
 		border-bottom: 0.0625em solid #000;
 		text-align: center;
   }
-
+.skills{
+	text-align:left;
+	border:none;
+}
 li {
 		display: inline;
 		margin: 2px 3px;
 }
-
+.menu{
+	display:inline;
+}
 a {
 		color: #000000;
 		text-transform: uppercase;
 		text-decoration: none;
 		padding: 0.25em 1.125em 0.3125em 1.125em;
   }
-			
+.menuA{
+	color: #000000;
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 0.25em 1.125em 0.3125em 1.125em;
+}			
 a:hover, a.on {
 		color: #cc3333;
 		background-color: #ffb84d;
@@ -226,7 +236,7 @@ img {
 	padding-left: 3.125em;
 	padding-right: 3.125em;
 	padding-bottom: 3.125em;
-	background-color: rgba(255,255,255,0.5);
+	background-color: #ffb84d;
 }
 .boxBig{
 	max-width: 68.75em;
@@ -245,7 +255,7 @@ img {
 }
 
 .lineHight2{
-	height: 20px;
+	height: 1.25em;
 }
 
 .lineHight3{
@@ -259,12 +269,12 @@ img {
 	float: left;
 	max-width: 28.0625em;
 	height: 1.125em;
-	padding: 0.25em 1.125em 0.3125em 1.125em;
-	font-size: 0.728em
+	/*padding: 0.25em 1.125em 0.3125em 1.125em;*/
+	font-size: 1em
 }
 .oneLine1{
 	float: left;
-	max-width: 15.5625em;
+	width: 21.125em;
 	height: 1.125em;
 	text-align: right;
 }
@@ -278,6 +288,34 @@ img {
 	max-width: 6.1875em;
 	height: 1.125em;
 	text-align: right;
+}
+.oneLine4{
+	float:left;
+	width:17.125em;
+	height:1.125em;
+	text-align:right;
+}
+.oneLine5{
+	float:left;
+	width:29.425em;
+	height:1.125em;
+	text-align:right;
+}
+.oneLine6{
+	float:left;
+	width:54.6875em;
+	height:1.125em;
+	text-align:right;
+	display:inline;
+}
+.oneLine7{
+	width:34.375em;
+}
+.box2{
+	height:10em;
+}
+.box3{
+	height:8em;
 }
 .oneOfThree,.twoOfThree,.threeOfThree{
 	float: left;
