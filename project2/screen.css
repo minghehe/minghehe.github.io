@@ -102,9 +102,9 @@ li {
 }
 a {
 		color: #000000;
-		text-transform: uppercase;
-		text-decoration: none;
-		padding: 0.25em 1.125em 0.3125em 1.125em;
+		/*text-transform: uppercase;*/
+		/*text-decoration: none;*/
+		/*padding: 0.25em 1.125em 0.3125em 1.125em;*/
   }
 .menuA{
 	color: #000000;
@@ -297,13 +297,13 @@ img {
 }
 .oneLine5{
 	float:left;
-	width:29.425em;
+	width:19.425em;
 	height:1.125em;
 	text-align:right;
 }
 .oneLine6{
 	float:left;
-	width:54.6875em;
+	width:43.8em;
 	height:1.125em;
 	text-align:right;
 	display:inline;
