@@ -31,6 +31,13 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+.paragraph{
+	padding-bottom:0.1333333333333334em;
+	padding-left:1.8333333333333334em;
+	padding-right:1.8333333333333334em;
+	padding-top:1.833333333333334em;
+	text-align:justify;
+}
 ol, ul {
 	list-style: none;
 }
