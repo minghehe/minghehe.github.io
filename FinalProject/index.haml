@@ -1,0 +1,88 @@
+%html
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "width=device-width,intial-scale=1.0", :name => "viewport"}/
+    %link{:href => "http://minghehe.github.io/FinalProject/css/style.css", :rel => "stylesheet"}/
+    %link{:href => "http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic", :rel => "stylesheet", :type => "text/css"}/
+    %link{:href => "{Favicon}", :rel => "shortcut icon"}/
+    %link{:href => "{RSS}", :rel => "alternate", :type => "application/rss+xml"}/
+    %title Minghe Hu's Tumblr
+  %body
+    #container
+      .menu
+        %ul.tabs
+          %li
+            %label
+              %a{:href => "http:// unabashedlymellowbouquetworld.tumblr.com/askk"} Ask
+          %li
+            %label
+              %a{:href => "/archive"} Archive
+      %header
+        .about
+          %img{:src => "http://static.tumblr.com/vlrusgx/3JKo6l1t1/blue-1326154_1920.jpg", :width => "100%"}/
+          %h1 {Title}
+          {block:Description}
+          %h2 {Description}
+          {/block:Description}
+          .photo-inner
+            %a{:href => "/"}
+              %img{:src => "{PortraitURL-128}"}/
+      #content
+        {block:Posts}
+        #posts
+          %header.metadata
+            {block:Date}
+            %h4
+              %time{:datetime => "{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}"} {Month} {DayOfMonth} {Year}
+            {/block:Date}
+            
+            {block:NoteCount}
+            %a.notecount{:href => "{Permalink}#notes"} {NoteCountWithLabel}
+            {/block:NoteCount}
+            
+            
+            {block:ContentSource}
+            .reblogged
+              %a{:href => "{SourceURL}"}
+                {lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo} {block:RebloggedFrom}
+                %img{:src => "{ReblogParentPortraitURL-16}"}>/
+                {/block:RebloggedFrom}
+                {block:SourceLogo}
+                %img{:alt => "{SourceTitle}", :height => "{LogoHeight}", :src => "{BlackLogoURL}", :width => "{LogoWidth}"}>/
+                {/block:SourceLogo}
+            {/block:ContentSource}
+          {block:Text}
+          .post-text
+            {block:Title}
+            %h3.sub-title
+              %a{:href => "{Permalink}"} {Title}
+            {/block:Title}
+            .text
+              {Body}
+          {/block:Text}
+          
+          {block:Photoset}
+          .photoset.inner
+            {Photoset-500}
+            {block:Caption}{Caption}{/block:Caption}
+            {/block:Photoset}
+            .like_and_reblog_buttons
+              %p {ReblogButton}{LikeButton}
+          {/block:Posts}
+          .top
+            %ul.socialicons
+              %li
+                %a.social-facebook{:href => "https://www.facebook.com/minghe.hu.12"}
+              %li
+                %a.social-twitter{:href => "https://twitter.com/"}
+              %li
+                %a.social-in{:href => "http://instagram.com/"}
+              %ul
+                Get the
+                %a{:href => "{RSS}"} feed for this blog
+        %footer
+          {block:PreviousPage}
+          %a{:href => "{PreviousPage}"} « Previous
+          {/block:PreviousPage}{block:NextPage}
+          %a{:href => "{NextPage}"} Next »
+          {/block:NextPage}
