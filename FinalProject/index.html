@@ -1,0 +1,112 @@
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width,intial-scale=1.0' name='viewport'>
+    <link href='http://minghehe.github.io/FinalProject/css/style.css' rel='stylesheet'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300,800,700,400italic|PT+Serif:400,400italic' rel='stylesheet' type='text/css'>
+    <link href='{Favicon}' rel='shortcut icon'>
+    <link href='{RSS}' rel='alternate' type='application/rss+xml'>
+    <title>Minghe Hu's Tumblr</title>
+  </head>
+  <body>
+    <div id='container'>
+      <div class='menu'>
+        <ul class='tabs'>
+          <li>
+            <label>
+              <a href='http:// unabashedlymellowbouquetworld.tumblr.com/askk'>Ask</a>
+            </label>
+          </li>
+          <li>
+            <label>
+              <a href='/archive'>Archive</a>
+            </label>
+          </li>
+        </ul>
+      </div>
+      <header>
+        <div class='about'>
+          <img src='http://static.tumblr.com/vlrusgx/3JKo6l1t1/blue-1326154_1920.jpg' width='100%'>
+          <h1>{Title}</h1>
+          {block:Description}
+          <h2>{Description}</h2>
+          {/block:Description}
+          <div class='photo-inner'>
+            <a href='/'>
+              <img src='{PortraitURL-128}'>
+            </a>
+          </div>
+        </div>
+      </header>
+      <div id='content'>
+        {block:Posts}
+        <div id='posts'>
+          <header class='metadata'>
+            {block:Date}
+            <h4>
+              <time datetime='{Year}-{MonthNumberWithZero}-{DayOfMonthWithZero}'>{Month} {DayOfMonth} {Year}</time>
+            </h4>
+            {/block:Date}
+            {block:NoteCount}
+            <a class='notecount' href='{Permalink}#notes'>{NoteCountWithLabel}</a>
+            {/block:NoteCount}
+            {block:ContentSource}
+            <div class='reblogged'>
+              <a href='{SourceURL}'>
+                {lang:Source}:{block:NoSourceLogo}{SourceTitle}{/block:NoSourceLogo} {block:RebloggedFrom}<img src='{ReblogParentPortraitURL-16}'>{/block:RebloggedFrom}
+                {block:SourceLogo}<img alt='{SourceTitle}' height='{LogoHeight}' src='{BlackLogoURL}' width='{LogoWidth}'>{/block:SourceLogo}
+              </a>
+            </div>
+            {/block:ContentSource}
+          </header>
+          {block:Text}
+          <div class='post-text'>
+            {block:Title}
+            <h3 class='sub-title'>
+              <a href='{Permalink}'>{Title}</a>
+            </h3>
+            {/block:Title}
+            <div class='text'>
+              {Body}
+            </div>
+          </div>
+          {/block:Text}
+          {block:Photoset}
+          <div class='photoset inner'>
+            {Photoset-500}
+            {block:Caption}{Caption}{/block:Caption}
+            {/block:Photoset}
+            <div class='like_and_reblog_buttons'>
+              <p>{ReblogButton}{LikeButton}</p>
+            </div>
+          </div>
+          {/block:Posts}
+          <div class='top'>
+            <ul class='socialicons'>
+              <li>
+                <a class='social-facebook' href='https://www.facebook.com/minghe.hu.12'></a>
+              </li>
+              <li>
+                <a class='social-twitter' href='https://twitter.com/'></a>
+              </li>
+              <li>
+                <a class='social-in' href='http://instagram.com/'></a>
+              </li>
+              <ul>
+                Do you want to get the
+                <a href='{RSS}'>feed for this blog</a>
+              </ul>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          {block:PreviousPage}
+          <a href='{PreviousPage}'>« Previous</a>
+          {/block:PreviousPage}{block:NextPage}
+          <a href='{NextPage}'>Next »</a>
+          {/block:NextPage}
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>
